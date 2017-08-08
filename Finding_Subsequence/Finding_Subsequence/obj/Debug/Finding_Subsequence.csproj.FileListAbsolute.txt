@@ -1,0 +1,6 @@
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\bin\Debug\Finding_Subsequence.exe.config
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\bin\Debug\Finding_Subsequence.exe
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\bin\Debug\Finding_Subsequence.pdb
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\obj\Debug\Finding_Subsequence.csprojResolveAssemblyReference.cache
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\obj\Debug\Finding_Subsequence.exe
+C:\Projects-Plural-DSV\Finding_Subsequence\Finding_Subsequence\obj\Debug\Finding_Subsequence.pdb
