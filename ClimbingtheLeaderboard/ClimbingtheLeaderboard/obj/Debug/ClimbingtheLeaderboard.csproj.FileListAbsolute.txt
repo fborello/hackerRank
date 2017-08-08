@@ -1,0 +1,6 @@
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\bin\Debug\ClimbingtheLeaderboard.exe.config
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\bin\Debug\ClimbingtheLeaderboard.exe
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\bin\Debug\ClimbingtheLeaderboard.pdb
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\obj\Debug\ClimbingtheLeaderboard.csprojResolveAssemblyReference.cache
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\obj\Debug\ClimbingtheLeaderboard.exe
+C:\Projects-Plural-DSV\ClimbingtheLeaderboard\ClimbingtheLeaderboard\obj\Debug\ClimbingtheLeaderboard.pdb
