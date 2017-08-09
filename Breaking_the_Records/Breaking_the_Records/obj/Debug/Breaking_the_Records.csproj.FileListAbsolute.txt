@@ -1,0 +1,6 @@
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\bin\Debug\Breaking_the_Records.exe.config
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\bin\Debug\Breaking_the_Records.exe
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\bin\Debug\Breaking_the_Records.pdb
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\obj\Debug\Breaking_the_Records.csprojResolveAssemblyReference.cache
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\obj\Debug\Breaking_the_Records.exe
+C:\Projects-Plural-DSV\Breaking_the_Records\Breaking_the_Records\obj\Debug\Breaking_the_Records.pdb
