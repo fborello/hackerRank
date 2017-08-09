@@ -1,0 +1,5 @@
+C:\Projects-Plural-DSV\Cats_and_a_Mouse\Cats_and_a_Mouse\bin\Debug\Cats_and_a_Mouse.exe.config
+C:\Projects-Plural-DSV\Cats_and_a_Mouse\Cats_and_a_Mouse\bin\Debug\Cats_and_a_Mouse.exe
+C:\Projects-Plural-DSV\Cats_and_a_Mouse\Cats_and_a_Mouse\bin\Debug\Cats_and_a_Mouse.pdb
+C:\Projects-Plural-DSV\Cats_and_a_Mouse\Cats_and_a_Mouse\obj\Debug\Cats_and_a_Mouse.exe
+C:\Projects-Plural-DSV\Cats_and_a_Mouse\Cats_and_a_Mouse\obj\Debug\Cats_and_a_Mouse.pdb
