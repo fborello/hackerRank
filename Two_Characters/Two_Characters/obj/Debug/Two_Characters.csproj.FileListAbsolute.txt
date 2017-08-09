@@ -1,0 +1,6 @@
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\bin\Debug\Two_Characters.exe.config
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\bin\Debug\Two_Characters.exe
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\bin\Debug\Two_Characters.pdb
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\obj\Debug\Two_Characters.csprojResolveAssemblyReference.cache
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\obj\Debug\Two_Characters.exe
+C:\Projects-Plural-DSV\Two_Characters\Two_Characters\obj\Debug\Two_Characters.pdb

@@ -1,0 +1,6 @@
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\bin\Debug\Quicksort_1_Partition.exe.config
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\obj\Debug\Quicksort_1_Partition.csprojResolveAssemblyReference.cache
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\bin\Debug\Quicksort_1_Partition.exe
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\bin\Debug\Quicksort_1_Partition.pdb
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\obj\Debug\Quicksort_1_Partition.exe
+C:\Projects-Plural-DSV\Quicksort_1_Partition\Quicksort_1_Partition\obj\Debug\Quicksort_1_Partition.pdb
