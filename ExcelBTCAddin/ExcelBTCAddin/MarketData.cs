@@ -301,13 +301,54 @@ namespace ExcelBTCAddin
                 //{
                 //    Console.WriteLine("{0}", d.Name);
                 //}
-                
+
                 var result = JsonConvert.DeserializeObject<JsonReturn>(response.Content.ReadAsStringAsync().Result);
                 //{ "success":true,"message":"","result":{ "Bid":0.01443899,"Ask":0.01444241,"Last":0.01444442} }
 
                 var t = JsonConvert.DeserializeObject<CryptoCoinTicker>(result.result.ToString());
 
                 Last = t.Last;
+            }
+
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
+
+            return Last;
+        }
+
+        [ComRegisterFunctionAttribute]
+        [ExcelFunction(IsVolatile = true, IsMacroType = true)]
+        public static decimal GetFlowBTCTicker(string ticker)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.flowbtc.com:8405/GetTicker/" + ticker + "/");
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            string urlParameters = "?market=";
+            decimal Last = 0;
+            // List data response.
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                string a = "a";
+                // Parse the response body. Blocking!
+                //var dataObjects = response.Content.ReadAsAsync<IEnumerable<DataObject>>().Result;
+                //foreach (var d in dataObjects)
+                //{
+                //    Console.WriteLine("{0}", d.Name);
+                //}
+
+                var result = JsonConvert.DeserializeObject<FlowBTCTicker>(response.Content.ReadAsStringAsync().Result);
+                //{ "success":true,"message":"","result":{ "Bid":0.01443899,"Ask":0.01444241,"Last":0.01444442} }
+
+                Last = decimal.Parse(result.last, new CultureInfo("en-US"));
+
+                
             }
 
             else
@@ -349,7 +390,7 @@ namespace ExcelBTCAddin
                 var t = JsonConvert.DeserializeObject<Dolar>(result.valores.ToString());
                 var info = JsonConvert.DeserializeObject<DolarInfo>(t.USD.ToString());
 
-                Last = decimal.Parse(info.valor,new CultureInfo("en-US"));
+                Last = decimal.Parse(info.valor, new CultureInfo("en-US"));
 
             }
 
@@ -360,6 +401,8 @@ namespace ExcelBTCAddin
 
             return Last;
         }
+
+
 
 
     }
@@ -394,4 +437,11 @@ namespace ExcelBTCAddin
         public decimal Ask { get; set; }
         public decimal Last { get; set; }
     }
+
+    public class FlowBTCTicker
+    {
+        public string last { get; set; }
+    }
+
+
 }
