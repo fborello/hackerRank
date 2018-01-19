@@ -348,7 +348,7 @@ namespace ExcelBTCAddin
 
                 Last = decimal.Parse(result.last, new CultureInfo("en-US"));
 
-                
+
             }
 
             else
@@ -403,6 +403,63 @@ namespace ExcelBTCAddin
         }
 
 
+        [ComRegisterFunctionAttribute]
+        [ExcelFunction(IsVolatile = true, IsMacroType = true)]
+        public static decimal GetHitBtcLast(string Ticker, string CompareTo)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.hitbtc.com/api/2/public/ticker/" + Ticker + CompareTo);
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            string urlParameters = "";
+            decimal Last = 0;
+            // List data response.
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                string a = "a";
+
+                var result = JsonConvert.DeserializeObject<CryptoCoinTickerString>(response.Content.ReadAsStringAsync().Result);
+                //{ "success":true,"message":"","result":{ "Bid":0.01443899,"Ask":0.01444241,"Last":0.01444442} }
+
+
+                Last = decimal.Parse(result.Last, new CultureInfo("en-US"));
+
+            }
+
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
+
+            return Last;
+        }
+
+        [ComRegisterFunctionAttribute]
+        [ExcelFunction(IsVolatile = true, IsMacroType = true)]
+        public static decimal GetLastCrypto(string Ticker, string CompareTo, string Exchange)
+        {
+
+            decimal Last = 0;
+
+            switch (Exchange.ToUpper())
+            {
+                case "BITTREX":
+                    Last = GetBittrexTicker(CompareTo + "-" + Ticker);
+                    break;
+                case "HITBTC":
+                    Last = GetHitBtcLast(Ticker, CompareTo.Replace("USDT", "USD"));
+                    break;
+                case "FLOWBTC":
+                    Last = GetFlowBTCTicker(CompareTo + Ticker);
+                    break;
+            }
+
+            return Last;
+        }
 
 
     }
@@ -436,6 +493,13 @@ namespace ExcelBTCAddin
         public decimal Bid { get; set; }
         public decimal Ask { get; set; }
         public decimal Last { get; set; }
+    }
+
+    public class CryptoCoinTickerString
+    {
+        public string Bid { get; set; }
+        public string Ask { get; set; }
+        public string Last { get; set; }
     }
 
     public class FlowBTCTicker
